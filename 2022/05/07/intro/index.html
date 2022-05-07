@@ -6,15 +6,15 @@
   <meta name="keywords" content="">
   <meta name="description" content="intro | Machine Phoenix&#39;s daily life">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="IntroductionI’m Machine Phoenix. This is my website to record my daily life. To see what I’m doing and what I’ve done in my research career, visit my Homepage.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="intro">
-<meta property="og:url" content="http://example.com/2022/05/07/intro/index.html">
+<meta name="description" content="About MeI’m Machine Phoenix. This is my website to record my daily life. To see what I’m doing and what I’ve done in my research career, visit my Homepage.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
 <meta property="og:site_name" content="Machine Phoenix&#39;s daily life">
-<meta property="og:description" content="IntroductionI’m Machine Phoenix. This is my website to record my daily life. To see what I’m doing and what I’ve done in my research career, visit my Homepage.">
+<meta property="og:description" content="About MeI’m Machine Phoenix. This is my website to record my daily life. To see what I’m doing and what I’ve done in my research career, visit my Homepage.">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-05-07T14:46:42.000Z">
-<meta property="article:modified_time" content="2022-05-07T14:50:01.344Z">
+<meta property="article:published_time" content="2022-05-07T16:40:00.000Z">
+<meta property="article:modified_time" content="2022-05-07T16:41:13.566Z">
 <meta property="article:author" content="Machine Phoenix">
 <meta name="twitter:card" content="summary">
 
@@ -61,7 +61,7 @@
         <a href="/"
    class="avatar_target">
     <img class="avatar"
-         src="/img/avatar.jpg"/>
+         src="/img/me.jpg"/>
 </a>
 <div class="author">
     <span>Machine Phoenix</span>
@@ -237,6 +237,8 @@
 
 
 
+    <a class="more-menus">更多菜单</a>
+
 
 <ul>
     <li>
@@ -253,7 +255,17 @@
         
             
             
+                <a class="dynamic-menu "
+                   target="_self"
+                   
+                   href="https://machinephoenix.github.io/">Me</a>
+        
             
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://github.com/MachinePhoenix">github</a>
+        
     </div>
     <div>
         
@@ -268,7 +280,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="1">
-
+<input type="hidden" id="yelog_site_word_count" value="31">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -362,6 +374,8 @@
         
     </div>
     <div class="article-meta">
+        
+        <span>Count:31</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -476,6 +490,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -500,6 +528,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>
@@ -578,7 +638,36 @@
 
     /*文章列表背景图*/
     
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 
@@ -586,6 +675,20 @@
 
 
 
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    <a class="dynamic-menu " target="_self"   href="https://machinephoenix.github.io/">Me</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/MachinePhoenix">github</a>
+    
+</div>
 
 
 </html>
