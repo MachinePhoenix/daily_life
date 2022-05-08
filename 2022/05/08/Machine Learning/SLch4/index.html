@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Abstract | Machine Phoenix&#39;s daily life</title>
-  <meta name="keywords" content=" something from a layman ">
-  <meta name="description" content="Abstract | Machine Phoenix&#39;s daily life">
+  <title>统计学习方法 ch4 | Machine Phoenix&#39;s daily life</title>
+  <meta name="keywords" content=" Bayesian ">
+  <meta name="description" content="统计学习方法 ch4 | Machine Phoenix&#39;s daily life">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="I’m Machine Phoenix. This is my website to record my daily life. To see what I’m doing and what I’ve done in my research career, visit my Homepage.">
 <meta property="og:type" content="website">
@@ -166,9 +166,9 @@
         
             
                 <li>
-                    <div data-rel="Explainable AI">
+                    <div data-rel="Explainable_AI">
                         
-                        Explainable AI
+                        Explainable_AI
                         <small>(1)</small>
                         
                     </div>
@@ -180,9 +180,40 @@
         
             
                 <li>
-                    <div data-rel="Deep Learning">
+                    <div data-rel="Machine_Learning">
+                        <i class="fold iconfont icon-right"></i>
                         
-                        Deep Learning
+                        Machine_Learning
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Machine_Learning<--->李航《统计学习方法》">
+                                        
+                                        李航《统计学习方法》
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Deep_Learning">
+                        
+                        Deep_Learning
                         <small>(1)</small>
                         
                     </div>
@@ -192,16 +223,6 @@
         
     
         
-            
-                <li>
-                    <div data-rel="Machine Learning &gt; 《统计学习方法》">
-                        
-                        Machine Learning &gt; 《统计学习方法》
-                        <small>(1)</small>
-                        
-                    </div>
-                    
-                </li>
             
         
     
@@ -313,24 +334,24 @@
             <span class="post-date" title="2022-05-07 22:46:42">2022/05/07</span>
         </a>
         
-        <a  class="全部文章 Deep Learning "
-           href="/2022/05/08/DL/"
+        <a  class="全部文章 Deep_Learning "
+           href="/2022/05/08/Deep%20Learning/DL/"
            data-tag="noting"
            data-author="" >
             <span class="post-title" title="占个坑位">占个坑位</span>
             <span class="post-date" title="2022-05-08 09:53:07">2022/05/08</span>
         </a>
         
-        <a  class="全部文章 Machine Learning &gt; 《统计学习方法》 "
-           href="/2022/05/08/Machine%20Learning/ML/"
+        <a  class="全部文章 Machine_Learning 李航《统计学习方法》 "
+           href="/2022/05/08/Machine%20Learning/SLch4/"
            data-tag="Bayesian"
            data-author="" >
             <span class="post-title" title="统计学习方法 ch4">统计学习方法 ch4</span>
             <span class="post-date" title="2022-05-08 09:46:32">2022/05/08</span>
         </a>
         
-        <a  class="全部文章 Explainable AI "
-           href="/2022/05/08/abstract/"
+        <a  class="全部文章 Explainable_AI "
+           href="/2022/05/08/Explainable%20AI/abstract/"
            data-tag="something from a layman"
            data-author="" >
             <span class="post-title" title="Abstract">Abstract</span>
@@ -363,9 +384,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-abstract" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Machine Learning/SLch4" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Abstract</h1>
+        <h1 class="article-title">统计学习方法 ch4</h1>
     
     <div class="article-meta">
         
@@ -375,7 +396,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Explainable AI">Explainable AI</a>
+            <a  data-rel="Machine_Learning">Machine_Learning</a> > 
+            
+            <a  data-rel="Machine_Learning&lt;---&gt;李航《统计学习方法》">李航《统计学习方法》</a>
             
         </span>
         
@@ -383,19 +406,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">something from a layman</a>
+            <a class="color4">Bayesian</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-05-08 09:45:40'>2022-05-08 09:40</time>
+            发布时间 : <time class="date" title='最后更新: 2022-05-08 10:21:22'>2022-05-08 09:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:663</span>
+        <span>字数:73</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -430,19 +453,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对可解释性的一点想法：</p>
-<ol>
-<li>首先想清楚，解释的对象是什么？</li>
-<li>解释神经网络，网络无非就是一个从输入空间到输出空间的函数，（4.23论文中UCLA这个组将其定义为输入空间到测试集误差的函数），无非就是求解这个函数的具体形式或者求近似解。</li>
-<li>为什么需要用神经网络？枚举输入空间到输出空间的所有函数有无穷个，而神经网络参数只有有限个，所以神经网络搜索更快。但是神经网络的设计有无数种，因此考虑神经网络的结构+参数量，枚举数量仍然是无穷。那为什么用神经网络，而不是暴力枚举或者启发式算法？可能因为神经网络好优化，有梯度递降，参数更新不是纯粹的枚举。</li>
-<li>考虑神经网络参数，那么需要评定网络参数对最终结果的影响，最自然的做法就是计算损失函数对参数的梯度。</li>
-<li>其次考虑数据集，如何评定单个数据点对整体结果的影响，自然就是计算损失函数对数据点的梯度。</li>
-<li>关于数据集和真实数据的差距，一般都是假设i.i.d.，但是4.23论文提出让训练数据有偏而使结果优于从真实数据i.i.d.取样得到的训练集的方法，称为dataset optimization。（感觉梯度上升正着用是data augmentation，反着用就是adversarial attack）</li>
-<li>关于特征，不同特征之间的关系是什么？训练不同阶段的同层特征（训练开始时浅层特征，训练到中间中层特征，训练到最后高层特征）之间的关系是什么？不同层特征（浅层到中层到高层）是如何变化的？</li>
-<li>特征是前一层的输出，也是后一层的输入，是否可以利用特征在某一层变化的梯度大小研究输入对训练的影响？</li>
-<li>关于交互，不同特征之间有一定关联，它们的交互对结果有影响。需要定义特征之间的交互，因此用到博弈论的知识，如Shapley value、哈萨尼股息、博弈交互理论等。低阶交互、中阶交互、高阶交互对结果的影响孰轻孰重？训练不同阶段交互作用如何变化？交互作用对网络鲁棒性、迁移性的影响？</li>
-<li>建模能力、表征能力、优化能力如何量化？</li>
-</ol>
+        <p>贝叶斯估计和极大似然估计是概率统计中常用的两种参数估计方式。</p>
+<p>学习本章会感觉有些公式莫名其妙(4.10,4.11)，其证明点<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43646592/article/details/109633872">这里</a></p>
+<p>里面涉及狄利克雷分布和贝塔分布，有些难懂。</p>
 
       
        
